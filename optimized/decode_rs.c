@@ -12,7 +12,7 @@
 
 #ifndef SYNDROME_CLASSIC
 
-#define N1 13  //4-stage decomposition
+#define N1 13  //4-stage decomposition (13*9*7*5 = 4095 = NN = 2^12 -1)
 #define N2  9
 #define N3  7
 #define N4  5
@@ -22,6 +22,12 @@
 #define C 1170
 #define D 3276
 
+/*
+i1 = i % N1
+i2 = i % N2
+i3 = i % N3
+i4 = i % N4
+*/
 #define GAMMA(i1,i2,i3,i4) ((((i1)*A)+((i2)*B)+((i3)*C)+((i4)*D))%NN)             /* Mapping indexes i1,i2,i3,i4 to common index i */
 
 #define CONDITION(x1,x2,x3,x4) if(GAMMA(x1,x2,x3,x4)&&(GAMMA(x1,x2,x3,x4)<(E+1))) /* We need only syndromes from 1 to E */
@@ -208,7 +214,7 @@ int decode_rs(data_t *data)
 
 //Chien search Optimized ------------------------------------------------
 
-//unsigned int tt=AVS_CNT0_REG;
+// tt=AVS_CNT0_REG;
 
   for(i=0;i<K+E;i++)Q[i]=1;
 

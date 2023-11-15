@@ -43,7 +43,7 @@ extern data_t recd[NN]; //for decoder
 
 extern unsigned int nn;
 
-inline unsigned int modnn(unsigned int x)
+static inline unsigned int modnn(unsigned int x)
 {
  while(x>=nn)
  {
@@ -53,11 +53,11 @@ inline unsigned int modnn(unsigned int x)
  return x;
 }
 
-inline unsigned int modnnF(unsigned int x)
+static inline unsigned int modnnF(unsigned int x)
 {
- if(x<nn)return x;
+ if(x<NN)return x;
  asm volatile ("" ::: "memory");
- return x-nn;
+ return x-NN;
 }
 
 static inline unsigned int gf_sub(unsigned int x,unsigned int y)
