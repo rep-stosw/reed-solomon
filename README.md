@@ -8,6 +8,7 @@ Based on the codec from Phil Karn KA9Q
 Codec parameters when measuring:
 
 K=3189 - number of data symbols
+
 E=779  - number of parity symbols
 
 1 symbol - 12 bit
@@ -31,6 +32,7 @@ Optimized codec:
 Encoded: 37.1 FPS
 
 Syndrome search (without Decomposition): 25.0 FPS => Decoding: 14.7 FPS
+
 Syndrome Search(4-Step Decomposition):  258.5 FPS => Decoding: 31.6 FPS
 
 Chien Search: 67.8 FPS
