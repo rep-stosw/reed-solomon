@@ -39,6 +39,12 @@ Chien Search: 67.8 FPS
 
 --------------------------------------------------------------------------------
 
+GCC Toolchain: arm-none-eabi v. 10.3
+
+Compilation flags: -Ofast -marm -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=vfpv4 -mfpu=neon -ftree-vectorize -fno-math-errno -ffunction-sections -fdata-sections
+
+--------------------------------------------------------------------------------
+
 Bibliography:
 
 1) https://ipnpr.jpl.nasa.gov/progress_report/42-43/43Q.PDF
