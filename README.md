@@ -17,31 +17,27 @@ E=779  - number of parity symbols
 
 Unoptimized codec:
 
-Encoding: 20.8 FPS
+Encoding: 23.1 FPS
 
-Decoding (maximum error correction): 11.8 FPS
+Decoding (maximum error correction): 15.2 FPS
 
-Search for syndromes (decoding without errors): 19.1 FPS
-
-Chien Search: 59.4 FPS
+Search for syndromes (decoding without errors): 25.2 FPS
 
 --------------------------------------------------------------------------------
 
 Optimized codec:
 
-Encoded: 37.1 FPS
+Encoded: 45.9 FPS
 
-Syndrome search (without Decomposition): 25.0 FPS => Decoding: 14.7 FPS
+Syndrome search (without Decomposition): 26.7 FPS => Decoding: 15.8 FPS
 
-Syndrome Search(4-Step Decomposition):  258.5 FPS => Decoding: 31.6 FPS
-
-Chien Search: 67.8 FPS
+Syndrome Search(4-Step Decomposition):  285.5 FPS => Decoding: 34.4 FPS
 
 --------------------------------------------------------------------------------
 
 GCC Toolchain: arm-none-eabi v. 10.3
 
-Compilation flags: -Ofast -marm -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=vfpv4 -mfpu=neon -ftree-vectorize -fno-math-errno -ffunction-sections -fdata-sections
+Compilation flags: -Ofast -mthumb -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=vfpv4 -mfpu=neon -ftree-vectorize -fno-math-errno -ffunction-sections -fdata-sections
 
 --------------------------------------------------------------------------------
 
